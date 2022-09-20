@@ -50,7 +50,8 @@ namespace CollectionsMasterConsoleUI
                 */
 
             Console.WriteLine("All Numbers Reversed:");
-            NumberPrinter(numArray.Reverse());
+            Array.Reverse(numArray);
+            NumberPrinter(numArray);
 
 
             Console.WriteLine("---------REVERSE CUSTOM------------");
@@ -98,7 +99,7 @@ namespace CollectionsMasterConsoleUI
             //DONE: Populate the List with 50 random numbers between 0 and 50 you will need a method for this
 
             Populater(intList);
-            NumberPrinter(intList);
+            //NumberPrinter(intList);
 
 
             //DONE: Print the new capacity
@@ -192,27 +193,15 @@ namespace CollectionsMasterConsoleUI
         }
 
         private static void NumberChecker(List<int> numberList, int searchNumber)
-        {            
-            int test = 0;
-            foreach (int num in numberList)
-            {
-                if (num == searchNumber)
-                {
-                    test += 1;
-                }
-                else
-                {
-                    test += 0;
-                }
-            }
-            if (test == 1)
+        {
+            if (numberList.Contains(searchNumber))
             {
                 Console.WriteLine($"{searchNumber} IS on the list.");
             }
             else
             {
                 Console.WriteLine($"{searchNumber} is NOT on the list.");
-            }
+            }            
         }            
     
 
