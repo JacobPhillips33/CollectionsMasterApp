@@ -35,7 +35,7 @@ namespace CollectionsMasterConsoleUI
             //DONE: Print the last number of the array
 
             Console.Write("The last number of the array: ");
-            Console.WriteLine(numArray[49]);
+            Console.WriteLine(numArray[numArray.Length -1]);
             Console.WriteLine("-------------------");
 
             Console.WriteLine("All Numbers Original");
