@@ -159,15 +159,15 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("------------------");
 
             //DONE: Convert the list to an array and store that into a variable
-
+            Console.WriteLine("------------here is the newArray------------");
             int[] newArray = intList.ToArray();
-
+            NumberPrinter(newArray);
 
             //DONE: Clear the list
-                        
-            intList.RemoveAll(x => x > -999999999); // There is probably a better way to do this, but this will work.
-            NumberPrinter(intList);                       
-
+            Console.WriteLine("------------here is the cleared list------------");
+            intList.Clear(); 
+            NumberPrinter(intList);
+            
             #endregion
         }
         private static int[] ThreeKiller(int[] numbers)
@@ -183,7 +183,7 @@ namespace CollectionsMasterConsoleUI
         {
             var evenList = new List<int>();
             foreach (int num in numberList)
-            {                
+            {
                 if (num % 2 == 0)
                 {
                     evenList.Add(num);
